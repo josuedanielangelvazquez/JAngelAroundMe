@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Detailcel" rowHeight="67" id="KGk-i7-Jjw" customClass="DetailTableViewCell" customModule="JAngelAroundMe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4X-je-A3t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hb4-f1-iva">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="67"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gs0-ci-AgS">
+                                        <rect key="frame" x="8" y="9.9999999999999964" width="41" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49.329999999999998" id="aHs-JB-73k"/>
+                                            <constraint firstAttribute="width" constant="41" id="yGi-Rj-YmL"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="gs0-ci-AgS" firstAttribute="top" secondItem="Hb4-f1-iva" secondAttribute="top" constant="9" id="APd-rU-iXb"/>
+                                    <constraint firstAttribute="width" constant="60" id="MMB-2A-uUD"/>
+                                    <constraint firstAttribute="trailing" secondItem="gs0-ci-AgS" secondAttribute="trailing" constant="11" id="VLN-jk-OUe"/>
+                                    <constraint firstItem="gs0-ci-AgS" firstAttribute="leading" secondItem="Hb4-f1-iva" secondAttribute="leading" constant="8" id="X3d-yZ-Hke"/>
+                                    <constraint firstAttribute="bottom" secondItem="gs0-ci-AgS" secondAttribute="bottom" constant="8.6699999999999999" id="lWg-Et-y7s"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwR-qA-sY4">
+                                <rect key="frame" x="60" y="0.0" width="260" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="d4X-je-A3t" secondAttribute="trailing" id="d5o-iK-8lz"/>
+                    <constraint firstItem="d4X-je-A3t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="huU-5v-3ex"/>
+                    <constraint firstAttribute="bottom" secondItem="d4X-je-A3t" secondAttribute="bottom" id="v3r-F3-Nyr"/>
+                    <constraint firstItem="d4X-je-A3t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zKF-qX-Lj2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="Detaillbl" destination="gwR-qA-sY4" id="nax-1K-8gG"/>
+                <outlet property="ImageIcons" destination="gs0-ci-AgS" id="khi-3r-Oda"/>
+                <outlet property="ViewImageIcons" destination="Hb4-f1-iva" id="Loh-Py-J60"/>
+            </connections>
+            <point key="canvasLocation" x="-3.0534351145038165" y="49.647887323943664"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="phone.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

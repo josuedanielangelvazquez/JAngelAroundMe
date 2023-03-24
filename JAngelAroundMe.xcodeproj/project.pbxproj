@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2B6D09B52BC30A174FB0117 /* Pods_JAngelAroundMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C164830651BEA7E53AC7396B /* Pods_JAngelAroundMe.framework */; };
+		FB070A8B29CCDE65003ED72D /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB070A8A29CCDE65003ED72D /* CategoriesTableViewCell.xib */; };
+		FB0CA6E429CBA149004BD7BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CA6E329CBA149004BD7BC /* AppDelegate.swift */; };
+		FB0CA6E629CBA149004BD7BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CA6E529CBA149004BD7BC /* SceneDelegate.swift */; };
+		FB0CA6E829CBA149004BD7BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CA6E729CBA149004BD7BC /* ViewController.swift */; };
+		FB0CA6EB29CBA149004BD7BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0CA6E929CBA149004BD7BC /* Main.storyboard */; };
+		FB0CA6ED29CBA14B004BD7BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0CA6EC29CBA14B004BD7BC /* Assets.xcassets */; };
+		FB0CA6F029CBA14B004BD7BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0CA6EE29CBA14B004BD7BC /* LaunchScreen.storyboard */; };
+		FB0CA6FD29CBB506004BD7BC /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CA6FC29CBB506004BD7BC /* PlaceModel.swift */; };
+		FB0CA6FF29CBC64D004BD7BC /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CA6FE29CBC64D004BD7BC /* PlacesTableViewController.swift */; };
+		FB0CA70229CBC663004BD7BC /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CA70029CBC663004BD7BC /* PlacesTableViewCell.swift */; };
+		FB0CA70329CBC663004BD7BC /* PlacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB0CA70129CBC663004BD7BC /* PlacesTableViewCell.xib */; };
+		FB0CA70629CBC679004BD7BC /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CA70429CBC679004BD7BC /* CategoriesTableViewCell.swift */; };
+		FB0CA70A29CBD274004BD7BC /* CategoriesCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB0CA70829CBD274004BD7BC /* CategoriesCoreData.xcdatamodeld */; };
+		FB0CA70C29CBD45C004BD7BC /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CA70B29CBD45C004BD7BC /* CategoriesViewModel.swift */; };
+		FB0CA70E29CBD57C004BD7BC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CA70D29CBD57C004BD7BC /* Result.swift */; };
+		FB7DECF929CCD6870051C6F4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7DECF829CCD6870051C6F4 /* Categories.swift */; };
+		FB7DECFB29CCDDD10051C6F4 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7DECFA29CCDDD10051C6F4 /* PlacesViewModel.swift */; };
+		FBAEC1E929CE0F8C000B28B7 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEC1E729CE0F8C000B28B7 /* DetailTableViewCell.swift */; };
+		FBAEC1EA29CE0F8C000B28B7 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBAEC1E829CE0F8C000B28B7 /* DetailTableViewCell.xib */; };
+		FBCCFDC429CD18CF00885716 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCCFDC329CD18CF00885716 /* PlaceDetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6142E27F22217A9747053F31 /* Pods-JAngelAroundMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JAngelAroundMe.release.xcconfig"; path = "Target Support Files/Pods-JAngelAroundMe/Pods-JAngelAroundMe.release.xcconfig"; sourceTree = "<group>"; };
+		9AD2D3BEBF05D3C779FA8142 /* Pods-JAngelAroundMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JAngelAroundMe.debug.xcconfig"; path = "Target Support Files/Pods-JAngelAroundMe/Pods-JAngelAroundMe.debug.xcconfig"; sourceTree = "<group>"; };
+		C164830651BEA7E53AC7396B /* Pods_JAngelAroundMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JAngelAroundMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB070A8A29CCDE65003ED72D /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
+		FB0CA6E029CBA149004BD7BC /* JAngelAroundMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JAngelAroundMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0CA6E329CBA149004BD7BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB0CA6E529CBA149004BD7BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FB0CA6E729CBA149004BD7BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB0CA6EA29CBA149004BD7BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB0CA6EC29CBA14B004BD7BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB0CA6EF29CBA14B004BD7BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB0CA6F129CBA14B004BD7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB0CA6FC29CBB506004BD7BC /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		FB0CA6FE29CBC64D004BD7BC /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		FB0CA70029CBC663004BD7BC /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		FB0CA70129CBC663004BD7BC /* PlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesTableViewCell.xib; sourceTree = "<group>"; };
+		FB0CA70429CBC679004BD7BC /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		FB0CA70929CBD274004BD7BC /* CategoriesCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CategoriesCoreData.xcdatamodel; sourceTree = "<group>"; };
+		FB0CA70B29CBD45C004BD7BC /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		FB0CA70D29CBD57C004BD7BC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FB7DECF829CCD6870051C6F4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		FB7DECFA29CCDDD10051C6F4 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
+		FBAEC1E729CE0F8C000B28B7 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		FBAEC1E829CE0F8C000B28B7 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		FBCCFDC329CD18CF00885716 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB0CA6DD29CBA149004BD7BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2B6D09B52BC30A174FB0117 /* Pods_JAngelAroundMe.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97D67F40AEE2FD26EE0281B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C164830651BEA7E53AC7396B /* Pods_JAngelAroundMe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB0CA6D729CBA149004BD7BC = {
+			isa = PBXGroup;
+			children = (
+				FB0CA6E229CBA149004BD7BC /* JAngelAroundMe */,
+				FB0CA6E129CBA149004BD7BC /* Products */,
+				FDE92BEB99B6C3D714C0407F /* Pods */,
+				97D67F40AEE2FD26EE0281B7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FB0CA6E129CBA149004BD7BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB0CA6E029CBA149004BD7BC /* JAngelAroundMe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB0CA6E229CBA149004BD7BC /* JAngelAroundMe */ = {
+			isa = PBXGroup;
+			children = (
+				FB0CA6FA29CBA43E004BD7BC /* Model */,
+				FB0CA6F929CBA432004BD7BC /* Controller */,
+				FB0CA6F829CBA428004BD7BC /* ViewModel */,
+				FB0CA6F729CBA41C004BD7BC /* View */,
+				FB0CA6E729CBA149004BD7BC /* ViewController.swift */,
+				FB0CA6E929CBA149004BD7BC /* Main.storyboard */,
+				FB0CA6EC29CBA14B004BD7BC /* Assets.xcassets */,
+				FB0CA6EE29CBA14B004BD7BC /* LaunchScreen.storyboard */,
+				FB0CA6F129CBA14B004BD7BC /* Info.plist */,
+			);
+			path = JAngelAroundMe;
+			sourceTree = "<group>";
+		};
+		FB0CA6F729CBA41C004BD7BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB7DED0229CCDE3A0051C6F4 /* Places */,
+				FB7DED0129CCDE330051C6F4 /* Categories */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB0CA6F829CBA428004BD7BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FB0CA6FB29CBA44B004BD7BC /* AppDelegate */,
+				FB0CA70829CBD274004BD7BC /* CategoriesCoreData.xcdatamodeld */,
+				FB0CA70B29CBD45C004BD7BC /* CategoriesViewModel.swift */,
+				FB7DECFA29CCDDD10051C6F4 /* PlacesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FB0CA6F929CBA432004BD7BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FB7DECFF29CCDE090051C6F4 /* Categories */,
+				FB7DECFC29CCDDDE0051C6F4 /* Places */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FB0CA6FA29CBA43E004BD7BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB0CA6FC29CBB506004BD7BC /* PlaceModel.swift */,
+				FB0CA70D29CBD57C004BD7BC /* Result.swift */,
+				FB7DECF829CCD6870051C6F4 /* Categories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FB0CA6FB29CBA44B004BD7BC /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FB0CA6E329CBA149004BD7BC /* AppDelegate.swift */,
+				FB0CA6E529CBA149004BD7BC /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FB7DECFC29CCDDDE0051C6F4 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				FBAEC1E529CE06F2000B28B7 /* Detail */,
+				FB0CA70029CBC663004BD7BC /* PlacesTableViewCell.swift */,
+				FB0CA6FE29CBC64D004BD7BC /* PlacesTableViewController.swift */,
+				FBCCFDC329CD18CF00885716 /* PlaceDetailViewController.swift */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		FB7DECFF29CCDE090051C6F4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FB0CA70429CBC679004BD7BC /* CategoriesTableViewCell.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		FB7DED0129CCDE330051C6F4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FB070A8A29CCDE65003ED72D /* CategoriesTableViewCell.xib */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		FB7DED0229CCDE3A0051C6F4 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				FBAEC1E629CE0706000B28B7 /* Detail */,
+				FB0CA70129CBC663004BD7BC /* PlacesTableViewCell.xib */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		FBAEC1E529CE06F2000B28B7 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FBAEC1E729CE0F8C000B28B7 /* DetailTableViewCell.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		FBAEC1E629CE0706000B28B7 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FBAEC1E829CE0F8C000B28B7 /* DetailTableViewCell.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		FDE92BEB99B6C3D714C0407F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AD2D3BEBF05D3C779FA8142 /* Pods-JAngelAroundMe.debug.xcconfig */,
+				6142E27F22217A9747053F31 /* Pods-JAngelAroundMe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB0CA6DF29CBA149004BD7BC /* JAngelAroundMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB0CA6F429CBA14B004BD7BC /* Build configuration list for PBXNativeTarget "JAngelAroundMe" */;
+			buildPhases = (
+				85D26C9855BEDB34E959E6D1 /* [CP] Check Pods Manifest.lock */,
+				FB0CA6DC29CBA149004BD7BC /* Sources */,
+				FB0CA6DD29CBA149004BD7BC /* Frameworks */,
+				FB0CA6DE29CBA149004BD7BC /* Resources */,
+				5E3B273822615430D83E9271 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JAngelAroundMe;
+			productName = JAngelAroundMe;
+			productReference = FB0CA6E029CBA149004BD7BC /* JAngelAroundMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB0CA6D829CBA149004BD7BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					FB0CA6DF29CBA149004BD7BC = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = FB0CA6DB29CBA149004BD7BC /* Build configuration list for PBXProject "JAngelAroundMe" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB0CA6D729CBA149004BD7BC;
+			productRefGroup = FB0CA6E129CBA149004BD7BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB0CA6DF29CBA149004BD7BC /* JAngelAroundMe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB0CA6DE29CBA149004BD7BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0CA6F029CBA14B004BD7BC /* LaunchScreen.storyboard in Resources */,
+				FB0CA6ED29CBA14B004BD7BC /* Assets.xcassets in Resources */,
+				FB070A8B29CCDE65003ED72D /* CategoriesTableViewCell.xib in Resources */,
+				FB0CA6EB29CBA149004BD7BC /* Main.storyboard in Resources */,
+				FBAEC1EA29CE0F8C000B28B7 /* DetailTableViewCell.xib in Resources */,
+				FB0CA70329CBC663004BD7BC /* PlacesTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E3B273822615430D83E9271 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JAngelAroundMe/Pods-JAngelAroundMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JAngelAroundMe/Pods-JAngelAroundMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JAngelAroundMe/Pods-JAngelAroundMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85D26C9855BEDB34E959E6D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JAngelAroundMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB0CA6DC29CBA149004BD7BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBCCFDC429CD18CF00885716 /* PlaceDetailViewController.swift in Sources */,
+				FB7DECFB29CCDDD10051C6F4 /* PlacesViewModel.swift in Sources */,
+				FBAEC1E929CE0F8C000B28B7 /* DetailTableViewCell.swift in Sources */,
+				FB0CA70A29CBD274004BD7BC /* CategoriesCoreData.xcdatamodeld in Sources */,
+				FB0CA6E829CBA149004BD7BC /* ViewController.swift in Sources */,
+				FB0CA6FD29CBB506004BD7BC /* PlaceModel.swift in Sources */,
+				FB0CA6E429CBA149004BD7BC /* AppDelegate.swift in Sources */,
+				FB0CA6E629CBA149004BD7BC /* SceneDelegate.swift in Sources */,
+				FB0CA6FF29CBC64D004BD7BC /* PlacesTableViewController.swift in Sources */,
+				FB7DECF929CCD6870051C6F4 /* Categories.swift in Sources */,
+				FB0CA70E29CBD57C004BD7BC /* Result.swift in Sources */,
+				FB0CA70629CBC679004BD7BC /* CategoriesTableViewCell.swift in Sources */,
+				FB0CA70C29CBD45C004BD7BC /* CategoriesViewModel.swift in Sources */,
+				FB0CA70229CBC663004BD7BC /* PlacesTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB0CA6E929CBA149004BD7BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB0CA6EA29CBA149004BD7BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB0CA6EE29CBA14B004BD7BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB0CA6EF29CBA14B004BD7BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB0CA6F229CBA14B004BD7BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB0CA6F329CBA14B004BD7BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB0CA6F529CBA14B004BD7BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AD2D3BEBF05D3C779FA8142 /* Pods-JAngelAroundMe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JAngelAroundMe/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digis.JAngelAroundMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB0CA6F629CBA14B004BD7BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6142E27F22217A9747053F31 /* Pods-JAngelAroundMe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JAngelAroundMe/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digis.JAngelAroundMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB0CA6DB29CBA149004BD7BC /* Build configuration list for PBXProject "JAngelAroundMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB0CA6F229CBA14B004BD7BC /* Debug */,
+				FB0CA6F329CBA14B004BD7BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB0CA6F429CBA14B004BD7BC /* Build configuration list for PBXNativeTarget "JAngelAroundMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB0CA6F529CBA14B004BD7BC /* Debug */,
+				FB0CA6F629CBA14B004BD7BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FB0CA70829CBD274004BD7BC /* CategoriesCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FB0CA70929CBD274004BD7BC /* CategoriesCoreData.xcdatamodel */,
+			);
+			currentVersion = FB0CA70929CBD274004BD7BC /* CategoriesCoreData.xcdatamodel */;
+			path = CategoriesCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FB0CA6D829CBA149004BD7BC /* Project object */;
+}

@@ -41,8 +41,8 @@ class PlaceDetailViewController: UIViewController, UITableViewDelegate, UITableV
     func loadData(){
         placesviewmodel.getbyid(idPlace: idPlace) { Detail in
             DispatchQueue.main.async { [self] in
-                lat = (Detail.result.geometry?.location.lat)!
-                lng = (Detail.result.geometry?.location.lng)!
+                lat = (Detail.result.geometry?.location?.lat)!
+                lng = (Detail.result.geometry?.location?.lng)!
                 let annotation1 = MKPointAnnotation()
                        annotation1.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lng)
                 annotation1.title = Detail.result.name // Optional

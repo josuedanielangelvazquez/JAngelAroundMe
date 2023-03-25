@@ -52,7 +52,7 @@ class PlacesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        idPlace = places[indexPath.row].place_id
+        idPlace = places[indexPath.row].place_id!
         performSegue(withIdentifier: "seguesdetail", sender: nil)
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,6 +72,10 @@ class PlacesTableViewController: UITableViewController {
         if segue.identifier == "seguesdetail"{
             let detail = segue.destination as! PlaceDetailViewController
             detail.idPlace = idPlace
+        }
+        if segue.identifier == "seugesmaps"{
+            let detail = segue.destination as! LocationViewController
+            detail.categoriesname = categoriename
         }
     }
     func loadUbications(){

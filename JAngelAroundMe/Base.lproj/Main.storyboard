@@ -106,17 +106,17 @@
             </objects>
             <point key="canvasLocation" x="924.4274809160305" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="bDO-Fu-zQR">
             <objects>
-                <viewController id="jQ8-1O-LfW" sceneMemberID="viewController">
+                <viewController id="jQ8-1O-LfW" customClass="LocationViewController" customModule="JAngelAroundMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qdA-IF-Wy7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrN-Yf-ddz">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YrN-Yf-ddz">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
-                                <standardMapConfiguration key="preferredConfiguration"/>
+                                <standardMapConfiguration key="preferredConfiguration" elevationStyle="realistic"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IAa-4u-KqW"/>
@@ -129,6 +129,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VaY-lw-jxq"/>
+                    <connections>
+                        <outlet property="Maplocation" destination="YrN-Yf-ddz" id="4nK-w6-uGy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uA8-yh-ldl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,7 +183,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DP7-Xm-5bR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856" y="-9"/>
+            <point key="canvasLocation" x="1709" y="-11"/>
         </scene>
         <!--Gregorys Coffe-->
         <scene sceneID="yq3-hv-U4z">

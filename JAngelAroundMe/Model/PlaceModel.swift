@@ -15,18 +15,18 @@ struct results : Codable{
     var geometry : geometry?
     var name : String?
     var opening_hours : opening_hours?
-    var place_id : String
+    var place_id : String?
 }
 struct opening_hours : Codable{
-    var open_now : Bool
+    var open_now : Bool?
 }
 
 struct geometry : Codable{
-    var location : location
+    var location : location?
 }
 struct location : Codable{
-    var lat : Double
-    var lng : Double
+    var lat : Double?
+    var lng : Double?
 }
 
 /////Detail Places /////

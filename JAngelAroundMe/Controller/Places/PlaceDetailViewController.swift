@@ -8,35 +8,98 @@
 import UIKit
 import MapKit
 import CoreLocation
-class PlaceDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PlaceDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
     
     var arraysectionss = [PlaceArrya]()
     var idPlace = ""
     var lat = 0.0
     var lng = -0.0
+    var latuser = 0.0
+    var lnguser = 0.0
     var placesviewmodel  = PlaceViewModel()
     var locationManager: CLLocationManager!
 
     @IBOutlet weak var MapaMapkit: MKMapView!
     @IBOutlet weak var TableDetail: UITableView!
     
-    
     override func viewDidLoad() {
+
+        MapaMapkit.delegate = self
+
             locationManager = CLLocationManager()
               locationManager.requestWhenInUseAuthorization()
         TableDetail.delegate = self
         TableDetail.dataSource = self
         view.addSubview(TableDetail)
+        MapaMapkit.delegate = self
+
         super.viewDidLoad()
       
         TableDetail.register(UINib(nibName: "DetailTableViewCell", bundle: .main), forCellReuseIdentifier: "Detailcel")
-       
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        locationManager
+
     }
    
     override func viewWillAppear(_ animated: Bool) {
         loadData()
       
     }
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+            if let polylineOverlay = overlay as? MKPolyline {
+                let renderer = MKPolylineRenderer(polyline: polylineOverlay)
+                renderer.strokeColor = UIColor.blue
+                renderer.lineWidth = 5
+                return renderer
+            }
+            return MKOverlayRenderer()
+        }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        latuser = locValue.latitude
+        lnguser = locValue.longitude
+        
+    }
+    
+    
+    func getDirections() {
+        
+              
+              let sourceLocation = CLLocationCoordinate2D(latitude: latuser, longitude: lnguser)
+              let destinationLocation = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+              
+              let sourcePlacemark = MKPlacemark(coordinate: sourceLocation)
+              let destinationPlacemark = MKPlacemark(coordinate: destinationLocation)
+              
+              let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+              let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+              
+              let directionsRequest = MKDirections.Request()
+              directionsRequest.source = sourceMapItem
+              directionsRequest.destination = destinationMapItem
+              directionsRequest.transportType = .automobile 
+              
+              let directions = MKDirections(request: directionsRequest)
+              directions.calculate { (response, error) in
+                  guard let response = response else {
+                      if let error = error {
+                          print("Error calculating directions: \(error.localizedDescription)")
+                      }
+                      return
+                  }
+                  
+                  let route = response.routes[0]
+                  self.MapaMapkit.addOverlay(route.polyline, level: .aboveRoads)
+                  
+                  let rect = route.polyline.boundingMapRect
+                  self.MapaMapkit.setRegion(MKCoordinateRegion(rect), animated: true)
+              }
+       }
     
     func loadData(){
         placesviewmodel.getbyid(idPlace: idPlace) { Detail in
@@ -123,5 +186,10 @@ class PlaceDetailViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
+    @IBAction func Rutaaction(_ sender: Any) {
 
+        getDirections()
+    }
+    
 }
+

@@ -25,8 +25,11 @@ class LocationViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         locationManager = CLLocationManager()
           locationManager.requestWhenInUseAuthorization()
+        
         loadData()
     }
+    
+    
     func loadData(){
         
         placesviewmodel.getplaces(Categorie: categoriesname) { places in

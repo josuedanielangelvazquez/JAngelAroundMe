@@ -91,20 +91,24 @@
                                 <rect key="frame" x="342.66666666666669" y="5" width="34.333333333333314" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="paperplane.circle" catalog="system" cornerStyle="capsule">
+                                <buttonConfiguration key="configuration" style="plain" image="star.circle.fill" catalog="system" cornerStyle="capsule">
                                     <backgroundConfiguration key="background"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="favsegues:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1EP-hk-Lt1"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableCategories" destination="unA-ex-yQ3" id="YIr-uA-j2x"/>
                         <segue destination="X2V-KZ-NiF" kind="show" identifier="seguesplaces" id="9Tu-8W-tfO"/>
+                        <segue destination="X2V-KZ-NiF" kind="show" identifier="seguesfav" id="qbP-Eh-eRn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924.4274809160305" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="799" y="-11"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="bDO-Fu-zQR">
@@ -135,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uA8-yh-ldl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2348.8549618320608" y="-633.09859154929586"/>
+            <point key="canvasLocation" x="2862" y="-782"/>
         </scene>
         <!--Places Table View Controller-->
         <scene sceneID="Cza-xW-DF1">
@@ -163,7 +167,7 @@
                     <navigationItem key="navigationItem" id="rja-8O-AgW">
                         <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" style="done" id="AKH-JR-oSy">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="S1o-zn-znw">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="S1o-zn-znw">
                                 <rect key="frame" x="342.66666666666669" y="5" width="34.333333333333314" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -183,9 +187,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DP7-Xm-5bR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709" y="-11"/>
+            <point key="canvasLocation" x="1718" y="-156"/>
         </scene>
-        <!--Gregorys Coffe-->
+        <!--Place Detail View Controller-->
         <scene sceneID="yq3-hv-U4z">
             <objects>
                 <viewController id="URN-8i-kgx" customClass="PlaceDetailViewController" customModule="JAngelAroundMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -218,6 +222,9 @@
                                                 <rect key="frame" x="160" y="0.0" width="73" height="72"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                <connections>
+                                                    <action selector="addfav:" destination="URN-8i-kgx" eventType="touchUpInside" id="OLG-MH-upS"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFh-fw-Vfi">
                                                 <rect key="frame" x="233" y="0.0" width="160" height="72"/>
@@ -272,7 +279,7 @@
                             <constraint firstItem="463-uu-q87" firstAttribute="trailing" secondItem="cYC-q0-krp" secondAttribute="trailing" id="ynO-0Q-5lH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Gregorys Coffe" id="bRM-77-NDd"/>
+                    <navigationItem key="navigationItem" id="bRM-77-NDd"/>
                     <connections>
                         <outlet property="MapaMapkit" destination="ekm-Vv-KvS" id="cmM-XD-vDF"/>
                         <outlet property="TableDetail" destination="463-uu-q87" id="RfF-LS-CrN"/>
@@ -280,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GP-ob-i9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2849.6183206106871" y="9.8591549295774659"/>
+            <point key="canvasLocation" x="2862" y="-11"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ynL-37-ync">
@@ -298,16 +305,19 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUI-eA-7mm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2.2900763358778624" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-31" y="-11"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qbP-Eh-eRn"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="AroundMe" width="920" height="248"/>
         <image name="gear.circle" catalog="system" width="128" height="123"/>
         <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
-        <image name="paperplane.circle" catalog="system" width="128" height="123"/>
         <image name="paperplane.circle.fill" catalog="system" width="128" height="123"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

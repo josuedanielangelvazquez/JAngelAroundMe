@@ -37,10 +37,16 @@ class LocationViewController: UIViewController {
                 locations = places?.results as! [results]
                 for locationsarray in locations{
                     let annotation = MKPointAnnotation()
-                    annotation.coordinate = CLLocationCoordinate2D(latitude: (locationsarray.geometry?.location?.lat)!
-                                                                   , longitude: (locationsarray.geometry?.location?.lng)!)
+                    annotation.coordinate = CLLocationCoordinate2D(latitude: (locationsarray.geometry?.location?.lat)!, longitude: (locationsarray.geometry?.location?.lng)!)
+                    
                     annotation.title = locationsarray.name
                     arrayAnnotation.append(annotation)
+                    
+                        let coordinate = annotation.coordinate
+                        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
+                        Maplocation.setRegion(region, animated: true)
+                    
+                    
                 }
                 for annotationmap in arrayAnnotation{
                     Maplocation.addAnnotation(annotationmap)

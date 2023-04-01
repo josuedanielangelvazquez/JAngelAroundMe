@@ -89,11 +89,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let detail = segue.destination as! PlacesTableViewController
             detail.categoriename = nameCategorie
         }
+        else if segue.identifier == "seguesfav"{
+            let detail = segue.destination as!
+            PlacesTableViewController
+            detail.favs = true
+        }
     }
     @IBAction func ConfigAction(_ sender: Any) {
         loadmessage()
     }
     
+    @IBAction func favsegues(_ sender: Any) {
+        performSegue(withIdentifier: "seguesfav", sender: nil)
+    }
     
 }
 extension ViewController : SwipeTableViewCellDelegate{
@@ -126,5 +134,6 @@ extension ViewController : SwipeTableViewCellDelegate{
         }
         
         
+    
     }
 

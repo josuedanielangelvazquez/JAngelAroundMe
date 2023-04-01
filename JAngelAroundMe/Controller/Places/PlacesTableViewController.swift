@@ -8,6 +8,7 @@
 import UIKit
 
 class PlacesTableViewController: UITableViewController {
+    var favs = false
     var categoriename = ""
     let placesviewmodel = PlaceViewModel()
     var places = [results]()
@@ -18,7 +19,7 @@ class PlacesTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "PlacesTableViewCell", bundle: .main), forCellReuseIdentifier: "placescell")
     }
     override func viewWillAppear(_ animated: Bool) {
-        loadData()
+        valloaddata()
     }
 
     func uialerterror(){
@@ -26,11 +27,29 @@ class PlacesTableViewController: UITableViewController {
         alertfalse.addAction(UIAlertAction(title: "Ok", style: .default))
         self.present(alertfalse, animated: true)
     }
+    func valloaddata(){
+        if favs == true{
+            loadatafav()
+        }
+        else{
+            loadData()
+        }
+    }
+    func loadatafav(){
+      let result =   placesviewmodel.getallfavorites()
+        if result.Correct == true{
+            places = result.Objects! as! [results]
+            tableView.reloadData()
+        }
+        else{
+            print(result.ErrorMessage)
+        }
+    }
     func loadData(){
         placesviewmodel.getplaces(Categorie: categoriename) { PlacesModel in
             DispatchQueue.main.async { [self] in
                 if PlacesModel != nil{
-                    places = PlacesModel!.results as [results]
+                    places = PlacesModel!.results! as [results]
                     tableView.reloadData()
                 }
                 else{

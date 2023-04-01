@@ -3,4 +3,10 @@
     <entity name="CategoriesCoreData" representedClassName="CategoriesCoreData" syncable="YES" codeGenerationType="class">
         <attribute name="nameCategorie" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Places" representedClassName="Places" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="idplace" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="open" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
 </model>

@@ -47,8 +47,19 @@ class PlaceDetailViewController: UIViewController, UITableViewDelegate, UITableV
    
     override func viewWillAppear(_ animated: Bool) {
         loadData()
-      
+   
     }
+    func alertmessagetrue(){
+        let alert = UIAlertController(title: "", message: "Se agrego a favoritos ", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        self.present(alert, animated: true)
+    }
+    func alertmessagefale(){
+        let alert = UIAlertController(title: "", message: "Ocurrio un Error, intentalo mas tarde", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        self.present(alert, animated: true )
+    }
+    
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             if let polylineOverlay = overlay as? MKPolyline {
                 let renderer = MKPolylineRenderer(polyline: polylineOverlay)
@@ -68,8 +79,6 @@ class PlaceDetailViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func getDirections() {
-        
-              
               let sourceLocation = CLLocationCoordinate2D(latitude: latuser, longitude: lnguser)
               let destinationLocation = CLLocationCoordinate2D(latitude: lat, longitude: lng)
               
@@ -104,11 +113,19 @@ class PlaceDetailViewController: UIViewController, UITableViewDelegate, UITableV
     func loadData(){
         placesviewmodel.getbyid(idPlace: idPlace) { Detail in
             DispatchQueue.main.async { [self] in
-                lat = (Detail.result.geometry?.location?.lat)!
-                lng = (Detail.result.geometry?.location?.lng)!
+                lat = (Detail.result?.geometry?.location?.lat)!
+                lng = (Detail.result?.geometry?.location?.lng)!
                 let annotation1 = MKPointAnnotation()
                        annotation1.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lng)
-                annotation1.title = Detail.result.name // Optional
+                
+                
+                
+                let coordinate = annotation1.coordinate
+                  let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+                  MapaMapkit.setRegion(region, animated: true)
+                
+                
+                annotation1.title = Detail.result?.name // Optional
                     //   annotation1.subtitle = "Example 0 subtitle" // Optional
                        self.MapaMapkit.addAnnotation(annotation1)
                 let result = generatearray(placedetailmodel: Detail)
@@ -125,25 +142,25 @@ class PlaceDetailViewController: UIViewController, UITableViewDelegate, UITableV
         for secion in 0...4 {
             if secion == 0{
                 var array = [String]()
-                array.append(placedetailmodel.result.name ?? "Not Information")
+                array.append(placedetailmodel.result?.name ?? "Not Information")
                 let seccion =  PlaceArrya(nameseccion: "SPECIAL OFFER", sectionarray: array)
                 arraysections.append(seccion)
             }
             if secion == 1{
                 var array = [String]()
-                array.append(placedetailmodel.result.formatted_phone_number ?? "Not information")
-                array.append(placedetailmodel.result.website ?? "Not Information")
+                array.append(placedetailmodel.result?.formatted_phone_number ?? "Not information")
+                array.append(placedetailmodel.result?.website ?? "Not Information")
                 let seccion = PlaceArrya(nameseccion: "CONTACTS", sectionarray: array)
                 arraysections.append(seccion)
             }
             if secion == 2{
                 var array = [String]()
-                array.append(placedetailmodel.result.vicinity ?? "Not information")
+                array.append(placedetailmodel.result?.vicinity ?? "Not information")
                 let seccion = PlaceArrya(nameseccion: "DIRECTION", sectionarray: array)
                 arraysections.append(seccion)
             }
             if secion == 3{
-                let seccion = PlaceArrya(nameseccion: "HOURS", sectionarray: placedetailmodel.result.current_opening_hours.weekday_text)
+                let seccion = PlaceArrya(nameseccion: "HOURS", sectionarray: placedetailmodel.result!.current_opening_hours.weekday_text)
                 arraysections.append(seccion)
             }
         }
@@ -164,12 +181,14 @@ class PlaceDetailViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Detailcel", for: indexPath as IndexPath) as! DetailTableViewCell
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.Detaillbl.text = arraysectionss[indexPath.section].sectionarray[indexPath.row]
         if indexPath.section == 0{
             cell.ImageIcons.isHidden = true
             cell.ViewImageIcons.isHidden = true
         }
         if indexPath.section == 1{
+            
             cell.ImageIcons.isHidden = false
             cell.ViewImageIcons.isHidden = false
         }
@@ -186,10 +205,27 @@ class PlaceDetailViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
+    
+    @IBAction func addfav(_ sender: Any) {
+        
+        let result = placesviewmodel.addfavorites(idplace: idPlace) { result in
+            DispatchQueue.main.async {
+                if result.Correct == true{
+                    self.alertmessagetrue()
+                }
+                else{
+                    self.alertmessagefale()
+                }
+            }
+        }
+      
+    }
     @IBAction func Rutaaction(_ sender: Any) {
 
         getDirections()
     }
     
 }
+
+
 

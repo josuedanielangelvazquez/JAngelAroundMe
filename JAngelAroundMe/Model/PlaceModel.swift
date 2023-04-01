@@ -7,7 +7,7 @@
 
 import Foundation
 struct PlaceModel : Codable{
-    var results : [results]
+    var results : [results]?
 }
 
 struct results : Codable{
@@ -31,7 +31,7 @@ struct location : Codable{
 
 /////Detail Places /////
 struct PlaceDetailModel : Codable{
-    var result : result
+    var result : result?
 }
 struct result : Codable{
     var current_opening_hours : current_opening_hours
@@ -50,7 +50,7 @@ struct current_opening_hours : Codable{
 
 ///Detail array ///
 struct PlaceArrya {
-    var nameseccion : String
+    var nameseccion : String?
     var sectionarray : [String]
 }
 

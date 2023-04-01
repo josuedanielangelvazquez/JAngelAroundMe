@@ -9,6 +9,7 @@ import UIKit
 
 class DetailTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var viewdetail: UIView!
     
     @IBOutlet weak var ViewImageIcons: UIView!
     @IBOutlet weak var ImageIcons: UIImageView!
